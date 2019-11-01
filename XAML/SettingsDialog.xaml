@@ -1,0 +1,44 @@
+<Grid
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:ma="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!-- <Label Margin="5">ConfigMgr Primary Server: </Label> -->
+                <Label Grid.Row="1" Margin="5">ConfigMgr Database Server: </Label>
+		<Label Grid.Row="2" Margin="5">Site Code: </Label>
+                <Label Grid.Row="3" Margin="5">Use Alternate Credentials: </Label>
+                <Label Grid.Row="4" Margin="5">Credentials: </Label>
+                <!-- <TextBox x:Name="SettingsCMPS" Grid.Column="1" Width="200" Margin="0,5" /> -->
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <TextBox x:Name="SettingsCMDS" Grid.Row="1" Grid.Column="1" Width="200"  Margin="0,5" />
+                    <!-- <CheckBox x:Name="SettingsCMDSSame" Margin="0,5">Same as Primary Server</CheckBox> -->
+                </StackPanel>		        
+                <TextBox x:Name="SettingsCMSC" Grid.Row="2" Grid.Column="1" Width="200" Margin="0,5" />
+                <CheckBox x:Name="SettingsUseCredentials" Grid.Row="3" Grid.Column="1" Margin="0,5" />
+                <StackPanel Grid.Row="4" Grid.Column="2">
+                    <Label x:Name="SettingsCredentialsName" Margin="0,5">(no credentials set)</Label>
+                    <Button x:Name="SettingsSetCredentials" Margin="0,5">Set Credentials...</Button>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="SettingsSaveButton" Content="Save" Margin="20,10" Width="150" />
+                <Button x:Name="SettingsCancelButton" Content="Cancel" Margin="20,10" Width="150" />
+            </StackPanel>
+        </Grid>
